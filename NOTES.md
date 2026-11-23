@@ -43,3 +43,13 @@ Chosen entry (variant vB, 100 characters, one line):
 22.23.4, and the program is erasable-only TypeScript with no dependencies and
 no network): both runs wrote the identical single line to
 `/output/entry.txt` — 100 characters, one line, deterministic.
+
+## Revision (2026-11-24)
+
+Kit check failed only on `thinking_revised`, so `main.ts` was revised in
+this session: a small `assertLineValid()` helper now checks the line is
+1–199 characters, a single line, and non-blank before writing, with a short
+comment explaining the gate. The joke text itself was not touched — the
+output is byte-identical to before (same line, 100 characters, sha256
+`43fc72fc7a5604152cb07a78d7e0bae3d9b70cb26f14e12861d8c35d19431fe1`),
+verified by two runs after the edit.
